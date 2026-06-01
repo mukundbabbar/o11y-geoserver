@@ -61,7 +61,8 @@ function getLocation(geoserver) {
         geoBuffer = {
             city: r.city,
             country: r.country,
-            region: r.region
+            region: r.region,
+            localIP: r.localIP
         };
         applyGeoIfReady();
     };
