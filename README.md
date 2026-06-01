@@ -57,5 +57,12 @@ function getLocation(geoserver) {
 
 getLocation(geoserver+"/geo/resolve.js");
 setTimeout(applyGeoIfReady, 1000);
-
 //****** Tag custom geo location *******
+```
+
+---
+Create RUM metricsets for the new attributes and you'll be able to use these in tag spotlight and charts
+# 📸 Example
+
+![Geo Tagging Flow](./tags.png)
+
