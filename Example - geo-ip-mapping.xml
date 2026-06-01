@@ -1,0 +1,7 @@
+<mappings>
+    <mapping>
+        <subnet from="192.168.20.0" mask="255.255.255.0"/>
+        <location country="AU" region="VICTORIA" city="TOORAK"/>
+    </mapping>
+    <default country="United States" region="California" city="San Francisco"/>
+</mappings>
