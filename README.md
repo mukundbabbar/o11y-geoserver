@@ -21,6 +21,7 @@ Update geoserver IP and PORT
 ```js
 //****** Tag custom geo location *******
 let geoserver="http(s)://IP:PORT"
+let storeIp = true;             // Change if want to store IP address
 let geoBuffer = null;
 let geoApplied = false;
 window.ADRUM = window.ADRUM || {};
@@ -35,6 +36,18 @@ function applyGeoIfReady() {
         'enduser.country': geoBuffer.country,
         'enduser.state': geoBuffer.region
     });
+    if (storeIp)
+    {
+        SplunkRum.setGlobalAttributes({
+            'enduser.ip': hexToIp(geoBuffer.localIP)
+        });
+    }
+}
+
+function hexToIp(hex) {
+    return hex.match(/.{1,2}/g)
+        .map(x => parseInt(x, 16))
+        .join('.');
 }
 
 function getLocation(geoserver) {
