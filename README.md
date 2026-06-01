@@ -13,6 +13,7 @@ It is useful when:
 
 1. It needs host:port of the existing AppDynamics GeoServer
 2. The existing mapping is used to populate custom location names based on user internal ip address:
+3. Set storeIp to false if IP address is not to be recorded and sent to Splunk
 
 # Snippet
 
